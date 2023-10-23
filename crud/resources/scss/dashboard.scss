@@ -1,0 +1,35 @@
+@import '~bootstrap/scss/bootstrap';
+
+.student{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 13px 0px;
+    .radio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: row wrap;
+        input[type="radio"] {
+            display: none;
+        }
+        label {
+        display: block;
+        width: 150px;
+        height: 25px;
+        border: 1px solid black;
+        color: black;
+        border-radius: 20px;
+        cursor: pointer;
+        text-align: center;
+        align-items: center;
+        background-color: rgb(156, 172, 156);
+        }
+
+        input[type="radio"].aanwezig:checked ~ label.anwezig {
+        background-color: lime;
+        }
+        input[type="radio"].afwezig:checked ~ label.aafwezig {
+        background-color: red;
+        }
+    }
+}
