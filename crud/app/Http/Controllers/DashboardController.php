@@ -81,4 +81,17 @@ class DashboardController extends Controller
         abscent::where('id', $id)->delete();
         return redirect()->back();
     }
+
+    public function students()
+    {
+        $students = student::has("klas")->get();
+        return view('students',[
+            'students' => $students,
+        ]);
+    }
+    public function deleteUser()
+    {
+        student::where('id', $id)->delete();
+        return redirect()->back();
+    }
 }

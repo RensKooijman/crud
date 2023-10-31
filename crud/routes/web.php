@@ -19,6 +19,11 @@ Route::get('/dashboard/abscence', [DashboardController::class, 'abscence'])->mid
 Route::post('/dashboard/filter', [DashboardController::class, 'filter'])->middleware(['auth'])->name('dashboard.filter'); 
 Route::post('/dashboard/{id}', [DashboardController::class, 'submit'])->middleware(['auth'])->name('dashboard.submit');
 Route::get('/dashboard/abscence/delete/{id}', [DashboardController::class, 'deleteAbscent'])->middleware(['auth'])->name('delete.Abscent');
+Route::get('/dashboard/students', [DashboardController::class, 'students'])->middleware(['auth'])->name('students');
+Route::get('/dashboard/user/delete/{id}', [DashboardController::class, 'deleteUser'])->middleware(['auth'])->name('delete.User');
+Route::post('/dashboard/user/add', [DashboardController::class, 'addUser'])->middleware(['auth'])->name('add.user');
+
+
 
 
 require __DIR__.'/auth.php';
