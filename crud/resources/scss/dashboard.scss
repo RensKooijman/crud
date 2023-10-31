@@ -1,5 +1,25 @@
 @import '~bootstrap/scss/bootstrap';
 
+.content{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    *{
+        width: 100%;
+    }
+}
+
+.body{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    > *{
+        width: 80%;
+    }
+}
+
 .student{
     display: flex;
     flex-flow: row wrap;
@@ -33,3 +53,20 @@
         }
     }
 }
+.roster{
+    cursor: pointer;
+}
+.send{
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
+    color: white;
+    background-color: blue;
+    justify-self: center;
+    cursor: pointer;
+}
+form{
+    display: grid;
+}
+

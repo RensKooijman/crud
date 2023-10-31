@@ -15,6 +15,10 @@ use App\Http\Controllers\DashboardController;
 */
 Route::get('/', [DashboardController::class, 'view'])->middleware(['auth'])->name('dashboard');
 Route::get('/dashboard/lesson/{id}', [DashboardController::class, 'lesson'])->middleware(['auth'])->name('lesson');
+Route::get('/dashboard/abscence', [DashboardController::class, 'abscence'])->middleware(['auth'])->name('abscence');
+Route::post('/dashboard/filter', [DashboardController::class, 'filter'])->middleware(['auth'])->name('dashboard.filter'); 
+Route::post('/dashboard/{id}', [DashboardController::class, 'submit'])->middleware(['auth'])->name('dashboard.submit');
+Route::get('/dashboard/abscence/delete/{id}', [DashboardController::class, 'deleteAbscent'])->middleware(['auth'])->name('delete.Abscent');
 
 
 require __DIR__.'/auth.php';
