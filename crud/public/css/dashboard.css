@@ -12048,3 +12048,11 @@ textarea.form-control-lg {
 form {
   display: grid;
 }
+
+.fade:not(.show) {
+  opacity: 1;
+}
+
+.modal-backdrop.fade {
+  opacity: 0.8;
+}

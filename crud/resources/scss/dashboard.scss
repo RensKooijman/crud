@@ -1,4 +1,4 @@
-@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap';
 
 .content{
     width: 100%;
@@ -71,3 +71,9 @@ form{
     display: grid;
 }
 
+.fade:not(.show) {
+    opacity: 1;
+}
+.modal-backdrop.fade {
+    opacity: 0.8;
+}
