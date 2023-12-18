@@ -80,7 +80,7 @@ class DashboardController extends Controller
         $incommingArray = $request->all();
         foreach($incommingArray['attendance'] as $studentId => $state){
             if($state == 'afwezig'){
-                abscent::insert(['student_id' => $studentId, 'roster_id' => $id]);
+                abscent::firstOrCreate(['student_id' => $studentId, 'roster_id' => $id]);
             }
         }
                     
